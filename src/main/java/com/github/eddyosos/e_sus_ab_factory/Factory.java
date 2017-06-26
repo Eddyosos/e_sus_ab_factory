@@ -10,6 +10,10 @@ import com.github.eddyosos.e_sus_ab_factory.cds.atendimentodomiciliar.IFichaAten
 import com.github.eddyosos.e_sus_ab_factory.cds.atendimentoodontologico.IFichaAtendimentoOdontologicoChild;
 import com.github.eddyosos.e_sus_ab_factory.cds.atendimentoodontologico.IFichaAtendimentoOdontologicoMaster;
 import com.github.eddyosos.e_sus_ab_factory.cds.atendimentoodontologico.IProcedimentoQuantidade;
+import com.github.eddyosos.e_sus_ab_factory.cds.atividadeindividual.IFichaAtendimentoIndividualChild;
+import com.github.eddyosos.e_sus_ab_factory.cds.atividadeindividual.IFichaAtendimentoIndividualMaster;
+import com.github.eddyosos.e_sus_ab_factory.cds.atividadeindividual.IOutrosSia;
+import com.github.eddyosos.e_sus_ab_factory.cds.atividadeindividual.IProblemaCondicaoAvaliacaoAI;
 import com.github.eddyosos.e_sus_ab_factory.cds.common.IEnderecoLocalPermanencia;
 import com.github.eddyosos.e_sus_ab_factory.cds.common.IHeaderCdsCadastro;
 import com.github.eddyosos.e_sus_ab_factory.cds.common.IUnicaLotacaoHeader;
@@ -32,6 +36,52 @@ public class Factory {
      */
     public Factory(Map<Class, String> mapping) {
         this.mapping = mapping;
+    }
+    
+    //atividade individual
+    
+    /**
+     * Intancia e retorna 
+     * @return instancia
+     * @throws ClassNotFoundException
+     * @throws InstantiationException
+     * @throws IllegalAccessException 
+     */
+    public IFichaAtendimentoIndividualChild getInstanceOfIFichaAtendimentoIndividualChild() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+        return (IFichaAtendimentoIndividualChild) Class.forName(mapping.get(IFichaAtendimentoIndividualChild.class)).newInstance();
+    }
+    
+    /**
+     * Intancia e retorna 
+     * @return instancia
+     * @throws ClassNotFoundException
+     * @throws InstantiationException
+     * @throws IllegalAccessException 
+     */
+    public IFichaAtendimentoIndividualMaster getInstanceOfIFichaAtendimentoIndividualMaster() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+        return (IFichaAtendimentoIndividualMaster) Class.forName(mapping.get(IFichaAtendimentoIndividualMaster.class)).newInstance();
+    }
+    
+    /**
+     * Intancia e retorna 
+     * @return instancia
+     * @throws ClassNotFoundException
+     * @throws InstantiationException
+     * @throws IllegalAccessException 
+     */
+    public IOutrosSia getInstanceOfIOutrosSia() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+        return (IOutrosSia) Class.forName(mapping.get(IOutrosSia.class)).newInstance();
+    }
+    
+    /**
+     * Intancia e retorna 
+     * @return instancia
+     * @throws ClassNotFoundException
+     * @throws InstantiationException
+     * @throws IllegalAccessException 
+     */
+    public IProblemaCondicaoAvaliacaoAI getInstanceOfIProblemaCondicaoAvaliacaoAI() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+        return (IProblemaCondicaoAvaliacaoAI) Class.forName(mapping.get(IProblemaCondicaoAvaliacaoAI.class)).newInstance();
     }
     
     //atendimento odontologico
