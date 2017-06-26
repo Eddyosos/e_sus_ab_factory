@@ -5,6 +5,7 @@
  */
 package com.github.eddyosos.e_sus_ab_factory.cds.esus.cds.cadastrodomiciliar;
 
+import com.github.eddyosos.e_sus_ab_factory.cds.esus.cds.avaliacaoelegibilidade.*;
 import java.util.Map;
 
 /**
@@ -36,7 +37,7 @@ public class Factory {
         return (ICadastroDomiciliar) Class.forName(mapping.get(ICadastroDomiciliar.class)).newInstance();
     }
     
-        /**
+    /**
      * Intancia e retorna 
      * @return instancia
      * @throws ClassNotFoundException
@@ -57,5 +58,4 @@ public class Factory {
     public IFamiliaRow getInstanceOfIFamiliaRow() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
         return (IFamiliaRow) Class.forName(mapping.get(IFamiliaRow.class)).newInstance();
     }
-    
 }
