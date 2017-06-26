@@ -5,12 +5,21 @@
  */
 package com.github.eddyosos.e_sus_ab_factory.cds.common;
 
+import br.gov.saude.esus.cds.transport.generated.thrift.common.UnicaLotacaoHeaderThrift;
+
 /**
  *
  * @author eddyosos
  */
 public interface IUnicaLotacaoHeader {
 
+    /**
+     * Retorna Instancia incapsulda do thrift
+     * @return 
+     */
+    @Deprecated
+    UnicaLotacaoHeaderThrift getInstance();
+    
     /**
      * Código do CBO do profissional.
      * @return

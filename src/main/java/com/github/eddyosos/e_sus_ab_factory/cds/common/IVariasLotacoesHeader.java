@@ -5,12 +5,21 @@
  */
 package com.github.eddyosos.e_sus_ab_factory.cds.common;
 
+import br.gov.saude.esus.cds.transport.generated.thrift.common.VariasLotacoesHeaderThrift;
+
 /**
  *
  * @author eddyosos
  */
 public interface IVariasLotacoesHeader {
 
+    /**
+     * Retorna instancia incapsulada do thrift
+     * @return 
+     */
+    @Deprecated
+    VariasLotacoesHeaderThrift getInstance();
+    
     /**
      * Código do CBO do profissional1.
      * @return

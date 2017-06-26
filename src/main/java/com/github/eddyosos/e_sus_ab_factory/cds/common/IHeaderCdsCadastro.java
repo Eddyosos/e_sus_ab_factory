@@ -5,12 +5,21 @@
  */
 package com.github.eddyosos.e_sus_ab_factory.cds.common;
 
+import br.gov.saude.esus.cds.transport.generated.thrift.common.HeaderCdsCadastroThrift;
+
 /**
  *
  * @author eddyosos
  */
 public interface IHeaderCdsCadastro {
 
+    /**
+     * Retorna instancia incapsulada do thrift
+     * @return 
+     */
+    @Deprecated
+    HeaderCdsCadastroThrift getInstance();
+    
     /**
      * CNES da unidade de saúde que o profissional está lotado.
      * @return CNES

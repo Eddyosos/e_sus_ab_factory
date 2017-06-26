@@ -5,6 +5,8 @@
  */
 package com.github.eddyosos.e_sus_ab_factory.cds.common;
 
+import br.gov.saude.esus.cds.transport.generated.thrift.common.EnderecoLocalPermanenciaThrift;
+
 /**
  *
  * @author eddyosos
@@ -12,10 +14,12 @@ package com.github.eddyosos.e_sus_ab_factory.cds.common;
 public interface IEnderecoLocalPermanencia {
 
     /**
-     * Bairro onde está localizado o domicílio
-     * @return nome do bairro
+     * Retorna o objeto incapsulado thrift
+     * Quebra do encapsulamento
+     * @return
      */
-    String getBairro();
+    @Deprecated
+    EnderecoLocalPermanenciaThrift getInstance();
 
     /**
      * CEP do logradouro do domicílio.
