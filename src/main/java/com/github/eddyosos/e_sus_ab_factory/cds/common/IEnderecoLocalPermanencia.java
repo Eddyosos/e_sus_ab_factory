@@ -22,6 +22,12 @@ public interface IEnderecoLocalPermanencia {
     EnderecoLocalPermanenciaThrift getInstance();
 
     /**
+     * Bairro onde está localizado o domicílio
+     * @return nome do bairro
+     */
+    String getBairro();
+    
+    /**
      * CEP do logradouro do domicílio.
      * @return Cep em string
      */
