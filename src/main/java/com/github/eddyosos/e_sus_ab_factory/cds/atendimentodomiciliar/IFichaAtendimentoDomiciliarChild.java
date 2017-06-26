@@ -5,6 +5,7 @@
  */
 package com.github.eddyosos.e_sus_ab_factory.cds.atendimentodomiciliar;
 
+import br.gov.saude.esus.cds.transport.generated.thrift.atendimentodomiciliar.FichaAtendimentoDomiciliarChildThrift;
 import java.util.List;
 
 /**
@@ -13,6 +14,12 @@ import java.util.List;
  */
 public interface IFichaAtendimentoDomiciliarChild {
 
+    /**
+     * Retorna instancia encapsulada thrift
+     * @return 
+     */
+    FichaAtendimentoDomiciliarChildThrift getInstance();
+    
     /**
      * Retorna a modalidade AD do cidadão atendido.
      * @return Código da modalidade AD do cidadão atendido.
