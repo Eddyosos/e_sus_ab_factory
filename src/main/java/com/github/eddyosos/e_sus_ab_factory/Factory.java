@@ -18,6 +18,7 @@ import com.github.eddyosos.e_sus_ab_factory.cds.common.IEnderecoLocalPermanencia
 import com.github.eddyosos.e_sus_ab_factory.cds.common.IHeaderCdsCadastro;
 import com.github.eddyosos.e_sus_ab_factory.cds.common.IUnicaLotacaoHeader;
 import com.github.eddyosos.e_sus_ab_factory.cds.common.IVariasLotacoesHeader;
+import com.github.eddyosos.e_sus_ab_factory.cds.esus.cds.avaliacaoelegibilidade.IFichaAvaliacaoElegibilidade;
 import java.util.Map;
 
 /**
@@ -36,6 +37,19 @@ public class Factory {
      */
     public Factory(Map<Class, String> mapping) {
         this.mapping = mapping;
+    }
+    
+    //Avaliacao Elegibilidade
+    
+    /**
+     * Intancia e retorna 
+     * @return instancia
+     * @throws ClassNotFoundException
+     * @throws InstantiationException
+     * @throws IllegalAccessException 
+     */
+    public IFichaAvaliacaoElegibilidade getInstanceOfIFichaAvaliacaoElegibilidade() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+        return (IFichaAvaliacaoElegibilidade) Class.forName(mapping.get(IFichaAvaliacaoElegibilidade.class)).newInstance();
     }
     
     //atividade individual
